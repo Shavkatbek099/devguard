@@ -9,7 +9,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const out = join(root, 'website/dist');
 const pkg = JSON.parse(readFileSync(join(root, 'packages/cli/package.json'), 'utf8'));
 const version = 'v' + pkg.version.split('.').slice(0, 2).join('.');
-const REPO = 'https://github.com/OWNER/devguard';
+const REPO = 'https://github.com/Shavkatbek099/devguard';
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 
 // Keep previously built doc versions; rebuild everything else.
@@ -17,6 +17,7 @@ for (const d of ['assets', 'vendor']) rmSync(join(out, d), { recursive: true, fo
 for (const f of ['index.html', 'search-index.json', 'versions.json']) rmSync(join(out, f), { force: true });
 rmSync(join(out, 'docs', version), { recursive: true, force: true });
 mkdirSync(join(out, 'assets'), { recursive: true });
+mkdirSync(join(out, 'vendor'), { recursive: true });
 for (const f of ['site.css', 'shared.js', 'playground.js']) cpSync(join(root, 'website', f), join(out, 'assets', f));
 for (const p of ['core', 'validator', 'scanner']) {
   const src = join(root, 'packages', p, 'dist/esm');
