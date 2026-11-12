@@ -1,0 +1,63 @@
+{
+  "name": "devguard",
+  "version": "0.1.0",
+  "description": "DevGuard CLI: validate env vars & config, and catch committed secrets",
+  "license": "MIT",
+  "author": "DevGuard contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OWNER/devguard.git",
+    "directory": "packages/cli"
+  },
+  "bugs": "https://github.com/OWNER/devguard/issues",
+  "homepage": "https://github.com/OWNER/devguard#readme",
+  "keywords": [
+    "devguard",
+    "cli",
+    "secrets",
+    "env",
+    "validation",
+    "security"
+  ],
+  "type": "module",
+  "bin": {
+    "devguard": "./dist/esm/bin.js"
+  },
+  "main": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "node ../../scripts/build.mjs --esm-only"
+  },
+  "dependencies": {
+    "@devguard/core": "^0.1.0",
+    "@devguard/validator": "^0.1.0",
+    "@devguard/scanner": "^0.1.0"
+  },
+  "peerDependencies": {
+    "yaml": "^2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "yaml": {
+      "optional": true
+    }
+  }
+}

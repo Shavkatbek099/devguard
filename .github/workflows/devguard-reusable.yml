@@ -1,0 +1,43 @@
+# Reusable workflow. Call it from any repository:
+#   jobs:
+#     devguard:
+#       uses: OWNER/devguard/.github/workflows/devguard-reusable.yml@v0
+#       with: { fail-on: high }
+name: DevGuard (reusable)
+on:
+  workflow_call:
+    inputs:
+      command:
+        type: string
+        default: check
+        description: check | scan | validate | doctor
+      fail-on:
+        type: string
+        default: high
+      working-directory:
+        type: string
+        default: .
+      node-version:
+        type: string
+        default: '22'
+      version:
+        type: string
+        default: latest
+        description: devguard version to run (pin it for reproducibility)
+permissions:
+  contents: read
+jobs:
+  devguard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+      - name: Run DevGuard
+        working-directory: ${{ inputs.working-directory }}
+        env:
+          DG_COMMAND: ${{ inputs.command }}
+          DG_FAIL_ON: ${{ inputs.fail-on }}
+          DG_VERSION: ${{ inputs.version }}
+        run: npx --yes "devguard@${DG_VERSION}" "${DG_COMMAND}" --format github --fail-on "${DG_FAIL_ON}"

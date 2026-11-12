@@ -1,0 +1,57 @@
+{
+  "name": "@devguard/scanner",
+  "version": "0.1.0",
+  "description": "Dependency-free secret scanner that never prints secret values",
+  "license": "MIT",
+  "author": "DevGuard contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OWNER/devguard.git",
+    "directory": "packages/scanner"
+  },
+  "bugs": "https://github.com/OWNER/devguard/issues",
+  "homepage": "https://github.com/OWNER/devguard#readme",
+  "keywords": [
+    "devguard",
+    "security",
+    "config",
+    "env",
+    "typescript"
+  ],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "node ../../scripts/build.mjs",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
+  },
+  "dependencies": {
+    "@devguard/core": "^0.1.0"
+  }
+}

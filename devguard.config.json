@@ -1,0 +1,4 @@
+{
+  "failOn": "medium",
+  "scan": { "exclude": ["packages/*/test/", "tests/"] }
+}

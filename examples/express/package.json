@@ -1,0 +1,10 @@
+{
+  "name": "devguard-example-express",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "@devguard/validator": "^0.1.0",
+    "express": "^4.19.0"
+  }
+}

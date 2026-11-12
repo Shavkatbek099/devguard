@@ -1,0 +1,10 @@
+- { name: good first issue, color: 7057ff, description: Good for newcomers }
+- { name: help wanted, color: 008672, description: Extra attention is needed }
+- { name: bug, color: d73a4a, description: Something isn't working }
+- { name: enhancement, color: a2eeef, description: New feature or request }
+- { name: scanner, color: fbca04, description: Secret scanner rules and behaviour }
+- { name: validator, color: 1d76db, description: Env/config validation }
+- { name: cli, color: 0e8a16, description: Command-line interface }
+- { name: docs, color: 0075ca, description: Documentation }
+- { name: security, color: b60205, description: Security-sensitive }
+- { name: triage, color: ededed, description: Needs maintainer review }

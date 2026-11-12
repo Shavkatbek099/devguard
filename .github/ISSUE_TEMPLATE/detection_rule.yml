@@ -1,0 +1,12 @@
+name: New secret detection rule / false positive
+description: Propose a pattern or report a false positive (never include real secrets)
+labels: [scanner, good first issue]
+body:
+  - type: input
+    id: provider
+    attributes: { label: Provider / token format, description: Link to the provider's documented format }
+    validations: { required: true }
+  - type: textarea
+    id: example
+    attributes: { label: Synthetic example, description: A FAKE value with the same shape. Not a real credential. }
+    validations: { required: true }

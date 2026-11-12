@@ -1,0 +1,48 @@
+{
+  "name": "devguard-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "DevGuard: Universal Developer Configuration & Security Toolkit",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "examples/basic",
+    "examples/typescript"
+  ],
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "build": "npm run build -w @devguard/core && npm run build -w @devguard/validator && npm run build -w @devguard/scanner && npm run build -w devguard",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.test.json",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "changeset": "changeset",
+    "release": "npm run build && changeset publish",
+    "verify": "npm run build && npm run typecheck && npm run lint && npm run format:check && npm test && npm run smoke",
+    "site:build": "node website/build.mjs",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^1.0.1",
+    "@changesets/cli": "^2.27.0",
+    "@eslint/js": "^9.0.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "marked": "^18.2.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.72.2",
+    "vite": "^7.3.8",
+    "vitest": "^5.1.0",
+    "yaml": "^2.9.1"
+  },
+  "type": "module",
+  "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "^11.0.8"
+    }
+  }
+}

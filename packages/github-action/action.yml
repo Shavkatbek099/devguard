@@ -1,0 +1,38 @@
+name: DevGuard
+description: Validate env/config and catch committed secrets, with PR annotations
+author: DevGuard contributors
+branding: { icon: shield, color: blue }
+inputs:
+  command:
+    description: check | scan | validate | doctor
+    default: check
+  fail-on:
+    description: Minimum severity that fails the job (info|low|medium|high|critical)
+    default: high
+  working-directory:
+    description: Directory to run in
+    default: .
+  version:
+    description: devguard version to run (pin for reproducibility)
+    default: latest
+  config:
+    description: Path to config file
+    default: ''
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+    - name: Run DevGuard
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      env:
+        DG_COMMAND: ${{ inputs.command }}
+        DG_FAIL_ON: ${{ inputs.fail-on }}
+        DG_VERSION: ${{ inputs.version }}
+        DG_CONFIG: ${{ inputs.config }}
+      run: |
+        args=("$DG_COMMAND" --format github --fail-on "$DG_FAIL_ON")
+        if [ -n "$DG_CONFIG" ]; then args+=(--config "$DG_CONFIG"); fi
+        npx --yes "devguard@${DG_VERSION}" "${args[@]}"
