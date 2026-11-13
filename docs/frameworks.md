@@ -6,7 +6,7 @@ DevGuard is framework-agnostic: validate once at startup, export the typed objec
 
 ```ts
 // src/config.ts
-import { createEnv, env } from '@devguard/validator';
+import { createEnv, env } from '@shavkat2006/devguard-validator';
 export const config = createEnv({ PORT: env.port({ default: 3000 }), DATABASE_URL: env.url() });
 ```
 

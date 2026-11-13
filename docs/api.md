@@ -1,6 +1,6 @@
 # API reference
 
-## `@devguard/validator`
+## `@shavkat2006/devguard-validator`
 
 ### `env` builders
 
@@ -29,10 +29,10 @@ Supported JSON Schema subset: `type` (incl. arrays), `required`, `properties`, `
 
 YAML needs an adapter function (e.g. `yaml.parse`), or `loadYamlAdapter()` finds `yaml`/`js-yaml` if installed.
 
-## `@devguard/scanner`
+## `@shavkat2006/devguard-scanner`
 
 ```ts
-import { scanDirectory, scanText, DEFAULT_PATTERNS } from '@devguard/scanner';
+import { scanDirectory, scanText, DEFAULT_PATTERNS } from '@shavkat2006/devguard-scanner';
 const { issues, filesScanned, filesSkipped } = await scanDirectory({
   cwd: process.cwd(),
   include: ['src'],
@@ -43,6 +43,6 @@ const { issues, filesScanned, filesSkipped } = await scanDirectory({
 
 Built-in rule ids: `aws-access-key-id`, `github-token`, `slack-token`, `stripe-live-key`, `google-api-key`, `npm-token`, `private-key`, `jwt`, `generic-secret-assignment`. Reported as `secret/<id>`; custom rules as `secret/custom/<id>`.
 
-## `@devguard/core`
+## `@shavkat2006/devguard-core`
 
 `Issue`, `Report`, `Severity`, `createReport(issues, failOn)`, `format(report, 'text'|'json'|'github')`, `exitCodeFor(report)`, `DevGuardError`, `UsageError`, `ValidationError`, `VERSION`.

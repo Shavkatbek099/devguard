@@ -1,4 +1,4 @@
-import { createEnv, env } from '@devguard/validator';
+import { createEnv, env } from '@shavkat2006/devguard-validator';
 
 const config = createEnv({
   PORT: env.port({ default: 3000 }),

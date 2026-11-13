@@ -5,9 +5,9 @@
     "moduleResolution": "Bundler",
     "noEmit": true,
     "paths": {
-      "@devguard/core": ["./packages/core/src/index.ts"],
-      "@devguard/validator": ["./packages/validator/src/index.ts"],
-      "@devguard/scanner": ["./packages/scanner/src/index.ts"]
+      "@shavkat2006/devguard-core": ["./packages/core/src/index.ts"],
+      "@shavkat2006/devguard-validator": ["./packages/validator/src/index.ts"],
+      "@shavkat2006/devguard-scanner": ["./packages/scanner/src/index.ts"]
     }
   },
   "include": ["packages/*/src", "packages/*/test", "tests", "vitest.config.ts", "examples/typescript"]

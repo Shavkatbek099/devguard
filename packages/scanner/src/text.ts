@@ -1,4 +1,4 @@
-import type { Issue, Severity } from '@devguard/core';
+import type { Issue, Severity } from '@shavkat2006/devguard-core';
 import { REMEDIATION, looksLikePlaceholder, shannonEntropy, type SecretPattern } from './patterns.js';
 import { sha256Hex } from './sha256.js';
 

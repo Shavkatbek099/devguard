@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: OWNER/devguard/packages/github-action@v0
+      - uses: Shavkatbek099/devguard/packages/github-action@v0
         with:
           fail-on: high
 ```

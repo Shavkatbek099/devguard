@@ -1,5 +1,5 @@
 {
-  "name": "devguard",
+  "name": "@shavkat2006/devguard",
   "version": "0.1.0",
   "description": "DevGuard CLI: validate env vars & config, and catch committed secrets",
   "license": "MIT",
@@ -48,9 +48,9 @@
     "build": "node ../../scripts/build.mjs --esm-only"
   },
   "dependencies": {
-    "@devguard/core": "^0.1.0",
-    "@devguard/validator": "^0.1.0",
-    "@devguard/scanner": "^0.1.0"
+    "@shavkat2006/devguard-core": "^0.1.0",
+    "@shavkat2006/devguard-validator": "^0.1.0",
+    "@shavkat2006/devguard-scanner": "^0.1.0"
   },
   "peerDependencies": {
     "yaml": "^2.0.0"

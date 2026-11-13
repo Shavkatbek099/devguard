@@ -1,6 +1,6 @@
 // Illustrative only: not installed or executed by this repo's CI. Requires `npm i express`.
 import express from 'express';
-import { createEnv, env } from '@devguard/validator';
+import { createEnv, env } from '@shavkat2006/devguard-validator';
 
 const config = createEnv({ PORT: env.port({ default: 3000 }), DATABASE_URL: env.url() });
 

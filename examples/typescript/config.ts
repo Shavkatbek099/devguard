@@ -1,5 +1,5 @@
-import { ValidationError } from '@devguard/core';
-import { createEnv, env } from '@devguard/validator';
+import { ValidationError } from '@shavkat2006/devguard-core';
+import { createEnv, env } from '@shavkat2006/devguard-validator';
 
 export function loadConfig(source: Record<string, string | undefined> = process.env) {
   return createEnv(

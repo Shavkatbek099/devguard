@@ -4,25 +4,25 @@ const common = {
   version: '0.1.0',
   license: 'MIT',
   author: 'DevGuard contributors',
-  repository: { type: 'git', url: 'git+https://github.com/OWNER/devguard.git', directory: '' },
-  bugs: 'https://github.com/OWNER/devguard/issues',
-  homepage: 'https://github.com/OWNER/devguard#readme',
+  repository: { type: 'git', url: 'git+https://github.com/Shavkatbek099/devguard.git', directory: '' },
+  bugs: 'https://github.com/Shavkatbek099/devguard/issues',
+  homepage: 'https://github.com/Shavkatbek099/devguard#readme',
   engines: { node: '>=18.17' },
   publishConfig: { access: 'public', provenance: true },
   sideEffects: false,
   files: ['dist', 'README.md', 'LICENSE'],
 };
 const libs = {
-  core: { name: '@devguard/core', description: 'Shared types, errors and reporters for DevGuard', deps: {} },
+  core: { name: '@shavkat2006/devguard-core', description: 'Shared types, errors and reporters for DevGuard', deps: {} },
   validator: {
-    name: '@devguard/validator',
+    name: '@shavkat2006/devguard-validator',
     description: 'Type-safe environment variable and config validation',
-    deps: { '@devguard/core': '^0.1.0' },
+    deps: { '@shavkat2006/devguard-core': '^0.1.0' },
   },
   scanner: {
-    name: '@devguard/scanner',
+    name: '@shavkat2006/devguard-scanner',
     description: 'Dependency-free secret scanner that never prints secret values',
-    deps: { '@devguard/core': '^0.1.0' },
+    deps: { '@shavkat2006/devguard-core': '^0.1.0' },
   },
 };
 for (const [dir, m] of Object.entries(libs)) {
@@ -89,7 +89,7 @@ for (const [dir, m] of Object.entries(libs)) {
 }
 // CLI (ESM only, bin)
 const cli = {
-  name: 'devguard',
+  name: '@shavkat2006/devguard',
   version: common.version,
   description: 'DevGuard CLI: validate env vars & config, and catch committed secrets',
   license: 'MIT',
@@ -107,7 +107,11 @@ const cli = {
   engines: common.engines,
   publishConfig: common.publishConfig,
   scripts: { build: 'node ../../scripts/build.mjs --esm-only' },
-  dependencies: { '@devguard/core': '^0.1.0', '@devguard/validator': '^0.1.0', '@devguard/scanner': '^0.1.0' },
+  dependencies: {
+    '@shavkat2006/devguard-core': '^0.1.0',
+    '@shavkat2006/devguard-validator': '^0.1.0',
+    '@shavkat2006/devguard-scanner': '^0.1.0',
+  },
   peerDependencies: { yaml: '^2.0.0' },
   peerDependenciesMeta: { yaml: { optional: true } },
 };

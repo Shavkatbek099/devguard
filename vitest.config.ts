@@ -6,9 +6,9 @@ const p = (rel: string) => fileURLToPath(new URL(rel, import.meta.url));
 export default defineConfig({
   resolve: {
     alias: {
-      '@devguard/core': p('./packages/core/src/index.ts'),
-      '@devguard/validator': p('./packages/validator/src/index.ts'),
-      '@devguard/scanner': p('./packages/scanner/src/index.ts'),
+      '@shavkat2006/devguard-core': p('./packages/core/src/index.ts'),
+      '@shavkat2006/devguard-validator': p('./packages/validator/src/index.ts'),
+      '@shavkat2006/devguard-scanner': p('./packages/scanner/src/index.ts'),
     },
   },
   test: {

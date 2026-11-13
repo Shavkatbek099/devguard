@@ -1,4 +1,4 @@
-import type { Issue } from '@devguard/core';
+import type { Issue } from '@shavkat2006/devguard-core';
 
 /** A deliberately small, dependency-free subset of JSON Schema. */
 export interface Schema {

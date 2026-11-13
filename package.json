@@ -13,7 +13,7 @@
     "node": ">=22.12"
   },
   "scripts": {
-    "build": "npm run build -w @devguard/core && npm run build -w @devguard/validator && npm run build -w @devguard/scanner && npm run build -w devguard",
+    "build": "npm run build -w @shavkat2006/devguard-core && npm run build -w @shavkat2006/devguard-validator && npm run build -w @shavkat2006/devguard-scanner && npm run build -w @shavkat2006/devguard",
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.test.json",
     "lint": "eslint .",

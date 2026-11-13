@@ -1,7 +1,7 @@
-// Runs the REAL @devguard/validator and @devguard/scanner code in the browser (see import map in index.html).
-import { env, validateEnv, parseDotenv, validateSchema } from '@devguard/validator';
-import { scanText } from '@devguard/scanner/text';
-import { DEFAULT_PATTERNS } from '@devguard/scanner/patterns';
+// Runs the REAL @shavkat2006/devguard-validator and @shavkat2006/devguard-scanner code in the browser (see import map in index.html).
+import { env, validateEnv, parseDotenv, validateSchema } from '@shavkat2006/devguard-validator';
+import { scanText } from '@shavkat2006/devguard-scanner/text';
+import { DEFAULT_PATTERNS } from '@shavkat2006/devguard-scanner/patterns';
 
 const $ = (id) => document.getElementById(id);
 const el = (tag, cls, text) => {

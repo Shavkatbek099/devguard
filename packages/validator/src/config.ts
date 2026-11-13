@@ -1,4 +1,4 @@
-import type { Issue } from '@devguard/core';
+import type { Issue } from '@shavkat2006/devguard-core';
 import { validateSchema, type Schema } from './schema.js';
 
 export type YamlParser = (text: string) => unknown;

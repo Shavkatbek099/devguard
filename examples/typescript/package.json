@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
-    "@devguard/validator": "*",
-    "@devguard/core": "*"
+    "@shavkat2006/devguard-validator": "*",
+    "@shavkat2006/devguard-core": "*"
   }
 }

@@ -19,7 +19,7 @@ into your terminal and your pull requests.
 
 ```bash
 npm i -D devguard           # CLI
-npm i @devguard/validator   # typed env validation in your app
+npm i @shavkat2006/devguard-validator   # typed env validation in your app
 npx devguard init --workflow
 npx devguard check
 ```
@@ -27,7 +27,7 @@ npx devguard check
 ### Typed environment
 
 ```ts
-import { createEnv, env } from '@devguard/validator';
+import { createEnv, env } from '@shavkat2006/devguard-validator';
 
 export const config = createEnv({
   NODE_ENV: env.enum(['development', 'test', 'production'] as const, { default: 'development' }),
@@ -60,18 +60,18 @@ Formats: `--format text|json|github` (GitHub format creates PR annotations).
 ### GitHub Actions
 
 ```yaml
-- uses: OWNER/devguard/packages/github-action@v0
+- uses: Shavkatbek099/devguard/packages/github-action@v0
   with: { fail-on: high }
 ```
 
 ## Packages
 
-| Package               | Purpose                                                       |
-| --------------------- | ------------------------------------------------------------- |
-| `@devguard/core`      | Issue/report types, errors, text/JSON/GitHub reporters        |
-| `@devguard/validator` | `createEnv`, `.env` parsing, JSON-Schema-subset config checks |
-| `@devguard/scanner`   | Secret scanner API (`scanDirectory`, `scanText`)              |
-| `devguard`            | CLI: `init`, `check`, `scan`, `validate`, `report`, `doctor`  |
+| Package                           | Purpose                                                       |
+| --------------------------------- | ------------------------------------------------------------- |
+| `@shavkat2006/devguard-core`      | Issue/report types, errors, text/JSON/GitHub reporters        |
+| `@shavkat2006/devguard-validator` | `createEnv`, `.env` parsing, JSON-Schema-subset config checks |
+| `@shavkat2006/devguard-scanner`   | Secret scanner API (`scanDirectory`, `scanText`)              |
+| `devguard`                        | CLI: `init`, `check`, `scan`, `validate`, `report`, `doctor`  |
 
 ## Documentation
 

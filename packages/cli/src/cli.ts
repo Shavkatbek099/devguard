@@ -1,6 +1,6 @@
 import { promises as fs } from 'node:fs';
 import { resolve } from 'node:path';
-import { UsageError, VERSION, createReport, exitCodeFor, format, type Issue, type Report } from '@devguard/core';
+import { UsageError, VERSION, createReport, exitCodeFor, format, type Issue, type Report } from '@shavkat2006/devguard-core';
 import { parseArgs, type Args } from './args.js';
 import { loadConfig } from './config.js';
 import { runConfigFiles, runDoctor, runEnv, runInit, runScan, type Ctx } from './commands.js';

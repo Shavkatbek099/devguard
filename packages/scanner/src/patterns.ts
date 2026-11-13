@@ -1,4 +1,4 @@
-import type { Severity } from '@devguard/core';
+import type { Severity } from '@shavkat2006/devguard-core';
 
 export interface SecretPattern {
   id: string;

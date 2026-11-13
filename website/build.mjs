@@ -111,10 +111,10 @@ const cfgSchema = JSON.stringify(
 );
 const importMap = {
   imports: {
-    '@devguard/core': './vendor/core/index.js',
-    '@devguard/validator': './vendor/validator/index.js',
-    '@devguard/scanner/text': './vendor/scanner/text.js',
-    '@devguard/scanner/patterns': './vendor/scanner/patterns.js',
+    '@shavkat2006/devguard-core': './vendor/core/index.js',
+    '@shavkat2006/devguard-validator': './vendor/validator/index.js',
+    '@shavkat2006/devguard-scanner/text': './vendor/scanner/text.js',
+    '@shavkat2006/devguard-scanner/patterns': './vendor/scanner/patterns.js',
   },
 };
 const ta = (id, v, rows = 7) => `<textarea id="${id}" rows="${rows}" spellcheck="false" aria-label="${id}">${esc(v)}</textarea>`;
@@ -138,7 +138,7 @@ const landing = `<section class="hero"><div><h1>Config that fails early. Secrets
 <div><h3>Secret scanner</h3><p>Pattern and entropy based, with excludes, custom rules, inline ignores and baselines. Reports hold a rule, a location and a fingerprint, never the value.</p></div>
 <div><h3>CI that annotates PRs</h3><p>A composite action and reusable workflow turn findings into annotations on the diff and fail the job at the severity you choose.</p></div></div>
 <h2 style="font-family:var(--serif)">Install</h2><pre>npm i -D devguard           # CLI
-npm i @devguard/validator   # typed env in your app
+npm i @shavkat2006/devguard-validator   # typed env in your app
 npx devguard init --workflow</pre><p><a href="docs/${version}/getting-started.html">Read the docs</a>. Limits are stated up front in the <a href="${REPO}#limitations-read-this">README</a>.</p></main>
 <script type="module" src="assets/playground.js"></script>`;
 writeFileSync(

@@ -3,6 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "dependencies": {
-    "@devguard/validator": "^0.1.0"
+    "@shavkat2006/devguard-validator": "^0.1.0"
   }
 }

@@ -1,9 +1,17 @@
 import { execFileSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import { dirname, resolve, extname } from 'node:path';
-import { UsageError, type Issue } from '@devguard/core';
-import { loadYamlAdapter, parseJson, parseYaml, validateConfig, validateEnv, type ConsistencyRule, type Schema } from '@devguard/validator';
-import { scanDirectory } from '@devguard/scanner';
+import { UsageError, type Issue } from '@shavkat2006/devguard-core';
+import {
+  loadYamlAdapter,
+  parseJson,
+  parseYaml,
+  validateConfig,
+  validateEnv,
+  type ConsistencyRule,
+  type Schema,
+} from '@shavkat2006/devguard-validator';
+import { scanDirectory } from '@shavkat2006/devguard-scanner';
 import { CONFIG_FILE, buildEnvSchema, loadEnvSource, type DevGuardConfig } from './config.js';
 
 export interface Ctx {

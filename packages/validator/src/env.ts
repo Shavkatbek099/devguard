@@ -1,4 +1,4 @@
-import { ValidationError, type Issue } from '@devguard/core';
+import { ValidationError, type Issue } from '@shavkat2006/devguard-core';
 
 export type ParseResult<T> = { ok: true; value: T } | { ok: false; message: string };
 

@@ -5,7 +5,7 @@
 ## One-time setup
 
 1. Replace every `OWNER` placeholder (`grep -rn OWNER .`) with the real GitHub org/user; set real URLs in `scripts/gen-packages.mjs` then run it.
-2. **Check npm name availability** for `devguard`, `@devguard/core`, `@devguard/validator`, `@devguard/scanner` (`npm view <name>`). The unscoped `devguard` name may be taken; if so rename the CLI (e.g. `@your-scope/devguard`) and update docs. Scoped packages require creating the `@devguard` org (or switching scope).
+2. **Check npm name availability** for `devguard`, `@shavkat2006/devguard-core`, `@shavkat2006/devguard-validator`, `@shavkat2006/devguard-scanner` (`npm view <name>`). The unscoped `devguard` name may be taken; if so rename the CLI (e.g. `@your-scope/devguard`) and update docs. Scoped packages require creating the `@devguard` org (or switching scope).
 3. Create an npm automation token → repository secret `NPM_TOKEN`. Enable 2FA on the npm account.
 4. Replace the Code-of-Conduct contact address; enable private vulnerability reporting.
 5. Create labels: `gh label create` from `.github/labels.yml`.

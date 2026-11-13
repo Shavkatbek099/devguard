@@ -1,8 +1,8 @@
 import { promises as fs } from 'node:fs';
 import { resolve } from 'node:path';
-import { UsageError, isSeverity, type Severity } from '@devguard/core';
-import { env, parseDotenv, type EnvSchema, type Field, type Schema } from '@devguard/validator';
-import type { CustomPattern } from '@devguard/scanner';
+import { UsageError, isSeverity, type Severity } from '@shavkat2006/devguard-core';
+import { env, parseDotenv, type EnvSchema, type Field, type Schema } from '@shavkat2006/devguard-validator';
+import type { CustomPattern } from '@shavkat2006/devguard-scanner';
 
 export interface EnvFieldConfig {
   type: 'string' | 'number' | 'port' | 'boolean' | 'url' | 'email' | 'enum';

@@ -4,11 +4,11 @@
 
 ```bash
 npm i -D devguard                 # CLI (Node >= 18.17)
-npm i @devguard/validator         # typed env validation in app code
+npm i @shavkat2006/devguard-validator         # typed env validation in app code
 npm i -D yaml                     # optional: enables YAML config validation
 ```
 
-`@devguard/*` libraries ship ESM and CommonJS builds plus TypeScript declarations.
+`@shavkat2006/devguard-*` libraries ship ESM and CommonJS builds plus TypeScript declarations.
 
 ## 1. Create a config
 
@@ -42,7 +42,7 @@ npx devguard check                      # everything
 ## 4. Use the same schema in code
 
 ```ts
-import { createEnv, env } from '@devguard/validator';
+import { createEnv, env } from '@shavkat2006/devguard-validator';
 export const config = createEnv({ PORT: env.port({ default: 3000 }) });
 ```
 

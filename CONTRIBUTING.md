@@ -5,7 +5,7 @@ Thanks for helping! Small, focused PRs are easiest to review.
 ## Setup
 
 ```bash
-git clone https://github.com/OWNER/devguard && cd devguard
+git clone https://github.com/Shavkatbek099/devguard && cd devguard
 npm ci
 npm run verify   # build + typecheck + lint + format check + tests
 ```

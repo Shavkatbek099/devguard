@@ -1,7 +1,7 @@
 ---
-'@devguard/core': minor
-'@devguard/validator': minor
-'@devguard/scanner': minor
+'@shavkat2006/devguard-core': minor
+'@shavkat2006/devguard-validator': minor
+'@shavkat2006/devguard-scanner': minor
 'devguard': minor
 ---
 

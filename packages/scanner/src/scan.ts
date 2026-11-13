@@ -1,6 +1,6 @@
 import { promises as fs } from 'node:fs';
 import { join, relative, resolve, sep } from 'node:path';
-import type { Issue } from '@devguard/core';
+import type { Issue } from '@shavkat2006/devguard-core';
 import { globToRegExp, matchesAny } from './glob.js';
 import { DEFAULT_PATTERNS } from './patterns.js';
 import { compileCustomPattern, scanText, type CustomPattern } from './text.js';

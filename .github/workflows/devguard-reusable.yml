@@ -1,7 +1,7 @@
 # Reusable workflow. Call it from any repository:
 #   jobs:
 #     devguard:
-#       uses: OWNER/devguard/.github/workflows/devguard-reusable.yml@v0
+#       uses: Shavkatbek099/devguard/.github/workflows/devguard-reusable.yml@v0
 #       with: { fail-on: high }
 name: DevGuard (reusable)
 on:

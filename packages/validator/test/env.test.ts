@@ -1,5 +1,5 @@
 import { describe, expect, expectTypeOf, it } from 'vitest';
-import { ValidationError } from '@devguard/core';
+import { ValidationError } from '@shavkat2006/devguard-core';
 import { createEnv, env, parseDotenv, validateEnv } from '../src/index.js';
 
 describe('validateEnv', () => {

@@ -1,4 +1,4 @@
-import { UsageError, isSeverity, type OutputFormat, type Severity } from '@devguard/core';
+import { UsageError, isSeverity, type OutputFormat, type Severity } from '@shavkat2006/devguard-core';
 
 export interface Args {
   command: string | undefined;

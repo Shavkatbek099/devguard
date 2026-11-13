@@ -2,8 +2,8 @@
 
 Three ways to run DevGuard in CI:
 
-1. **Composite action**: `uses: OWNER/devguard/packages/github-action@v0` (inputs: `command`, `fail-on`, `working-directory`, `version`, `config`).
-2. **Reusable workflow**: `uses: OWNER/devguard/.github/workflows/devguard-reusable.yml@v0`.
+1. **Composite action**: `uses: Shavkatbek099/devguard/packages/github-action@v0` (inputs: `command`, `fail-on`, `working-directory`, `version`, `config`).
+2. **Reusable workflow**: `uses: Shavkatbek099/devguard/.github/workflows/devguard-reusable.yml@v0`.
 3. **Plain npx**: `npx --yes devguard@<version> check --format github`.
 
 `--format github` emits `::error`/`::warning`/`::notice` workflow commands, shown as annotations on the PR diff.

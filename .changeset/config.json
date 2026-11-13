@@ -1,8 +1,8 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
-  "changelog": ["@changesets/changelog-github", { "repo": "OWNER/devguard" }],
+  "changelog": ["@changesets/changelog-github", { "repo": "Shavkatbek099/devguard" }],
   "commit": false,
-  "fixed": [["@devguard/core", "@devguard/validator", "@devguard/scanner", "devguard"]],
+  "fixed": [["@shavkat2006/devguard-core", "@shavkat2006/devguard-validator", "@shavkat2006/devguard-scanner", "devguard"]],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",

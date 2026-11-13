@@ -1,5 +1,5 @@
 {
-  "name": "@devguard/validator",
+  "name": "@shavkat2006/devguard-validator",
   "version": "0.1.0",
   "description": "Type-safe environment variable and config validation",
   "license": "MIT",
@@ -52,6 +52,6 @@
     "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
   },
   "dependencies": {
-    "@devguard/core": "^0.1.0"
+    "@shavkat2006/devguard-core": "^0.1.0"
   }
 }

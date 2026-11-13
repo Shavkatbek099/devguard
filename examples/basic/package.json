@@ -7,6 +7,6 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "@devguard/validator": "*"
+    "@shavkat2006/devguard-validator": "*"
   }
 }
