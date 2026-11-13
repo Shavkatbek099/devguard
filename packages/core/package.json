@@ -6,11 +6,11 @@
   "author": "DevGuard contributors",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OWNER/devguard.git",
+    "url": "git+https://github.com/Shavkatbek099/devguard.git",
     "directory": "packages/core"
   },
-  "bugs": "https://github.com/OWNER/devguard/issues",
-  "homepage": "https://github.com/OWNER/devguard#readme",
+  "bugs": "https://github.com/Shavkatbek099/devguard/issues",
+  "homepage": "https://github.com/Shavkatbek099/devguard#readme",
   "keywords": [
     "devguard",
     "security",
