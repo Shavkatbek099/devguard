@@ -3,6 +3,8 @@
 #     devguard:
 #       uses: Shavkatbek099/devguard/.github/workflows/devguard-reusable.yml@v0
 #       with: { fail-on: high }
+#         fail-on: high
+#         version: '0.1.0'
 name: DevGuard (reusable)
 on:
   workflow_call:
