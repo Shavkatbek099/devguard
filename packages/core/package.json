@@ -1,6 +1,6 @@
 {
   "name": "@shavkat2006/devguard-core",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Shared types, errors and reporters for DevGuard",
   "license": "MIT",
   "author": "DevGuard contributors",
